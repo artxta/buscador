@@ -3,6 +3,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // === Formulario principal ===
     document.getElementById('familia').addEventListener('change', cargarNiveles);
     document.getElementById('nivel').addEventListener('change', cargarEnsenanzas);
+    document.getElementById('ensenanza').addEventListener('change', function () {
+        if (this.value) {
+            actualizarPasos(4);
+            if (typeof umami !== 'undefined') umami.track('seleccion_ensenanza', { ensenanza: this.value, nombre: this.options[this.selectedIndex].text });
+            buscarCentros();
+        } else {
+            document.getElementById('results').innerHTML = '';
+        }
+    });
     document.getElementById('modalidad').addEventListener('change', () => {
         if (typeof umami !== 'undefined') {
             const mod = document.getElementById('modalidad').value;

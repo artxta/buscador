@@ -51,15 +51,7 @@ function cargarEnsenanzas() {
         selectEnsenanza.disabled = true;
         document.getElementById('mensajeAutomatico').style.display = 'none';
     }
-    selectEnsenanza.addEventListener('change', function () {
-        if (this.value) {
-            actualizarPasos(4);
-            if (typeof umami !== 'undefined') umami.track('seleccion_ensenanza', { ensenanza: this.value, nombre: this.options[this.selectedIndex].text });
-            buscarCentros();
-        } else {
-            resultsDiv.innerHTML = '';
-        }
-    });
+
 }
 
 function actualizarPasos(p) {
