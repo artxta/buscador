@@ -1,0 +1,388 @@
+[
+    {
+        "id": "nivel",
+        "texto": "¿Qué nivel de estudios quieres cursar?",
+        "tipo": "select",
+        "opciones": [
+            { "valor": "basico", "label": "Título Profesional Básico" },
+            { "valor": "medio", "label": "Técnico (Grado Medio)" },
+            { "valor": "superior", "label": "Técnico Superior (Grado Superior)" },
+            { "valor": "especializacionMedio", "label": "Curso de Especialización (Grado Medio)" },
+            { "valor": "especializacionSuperior", "label": "Curso de Especialización (Grado Superior)" }
+        ],
+        "puntuacion": {}
+    },
+    {
+        "id": "v1",
+        "texto": "¿Te gusta trabajar con las manos y crear cosas físicas?",
+        "icono": "🛠️",
+        "tipo": "si_no",
+        "puntuacion": {
+            "fme": 2,
+            "mam": 2,
+            "eoc": 2,
+            "ima": 1
+        }
+    },
+    {
+        "id": "v2",
+        "texto": "¿Prefieres trabajar con ordenadores y tecnología?",
+        "icono": "💻",
+        "tipo": "si_no",
+        "puntuacion": {
+            "ifc": 3,
+            "ele": 2,
+            "ims": 1
+        }
+    },
+    {
+        "id": "v3",
+        "texto": "¿Te gusta ayudar a personas y cuidar de su bienestar?",
+        "icono": "❤️",
+        "tipo": "si_no",
+        "puntuacion": {
+            "san": 3,
+            "ssc": 2,
+            "imp": 1
+        }
+    },
+    {
+        "id": "v4",
+        "texto": "¿Disfrutas organizando, planificando y gestionando proyectos?",
+        "icono": "📋",
+        "tipo": "si_no",
+        "puntuacion": {
+            "adg": 3,
+            "com": 1,
+            "eoc": 1
+        }
+    },
+    {
+        "id": "v5",
+        "texto": "¿Te gustaría trabajar en el campo o con la naturaleza?",
+        "icono": "🌿",
+        "tipo": "si_no",
+        "puntuacion": {
+            "agr": 3,
+            "ena": 1,
+            "sea": 1
+        }
+    },
+    {
+        "id": "v6",
+        "texto": "¿Te interesa el mundo de los negocios y las ventas?",
+        "icono": "💰",
+        "tipo": "si_no",
+        "puntuacion": {
+            "com": 3,
+            "adg": 2
+        }
+    },
+    {
+        "id": "v7",
+        "texto": "¿Te gusta cocinar o la gastronomía?",
+        "icono": "🍳",
+        "tipo": "si_no",
+        "puntuacion": {
+            "hot": 3,
+            "ina": 2
+        }
+    },
+    {
+        "id": "v8",
+        "texto": "¿Te interesa la electricidad, los circuitos o la electrónica?",
+        "icono": "⚡",
+        "tipo": "si_no",
+        "puntuacion": {
+            "ele": 3,
+            "ima": 1
+        }
+    },
+    {
+        "id": "v9",
+        "texto": "¿Te gustaría trabajar en un hospital o centro de salud?",
+        "icono": "🏥",
+        "tipo": "si_no",
+        "puntuacion": {
+            "san": 3
+        }
+    },
+    {
+        "id": "v10",
+        "texto": "¿Te gusta el arte, la música o el diseño?",
+        "icono": "🎨",
+        "tipo": "si_no",
+        "puntuacion": {
+            "ara": 3,
+            "ims": 2,
+            "tcp": 1,
+            "vic": 1
+        }
+    },
+    {
+        "id": "v11",
+        "texto": "¿Prefieres trabajar al aire libre antes que en una oficina?",
+        "icono": "☀️",
+        "tipo": "si_no",
+        "puntuacion": {
+            "agr": 2,
+            "eoc": 2,
+            "ena": 1,
+            "sea": 1
+        },
+        "excluye": ["adg"]
+    },
+    {
+        "id": "v12",
+        "texto": "¿Te gustaría trabajar en la industria alimentaria o farmacéutica?",
+        "icono": "🏭",
+        "tipo": "si_no",
+        "puntuacion": {
+            "ina": 3,
+            "qui": 2
+        }
+    },
+    {
+        "id": "v13",
+        "texto": "¿Te interesa la mecánica, los motores o los vehículos?",
+        "icono": "🔧",
+        "tipo": "si_no",
+        "puntuacion": {
+            "tmv": 3,
+            "fme": 1,
+            "ima": 1
+        }
+    },
+    {
+        "id": "v14",
+        "texto": "¿Te gustaría trabajar en turismo o viajes?",
+        "icono": "✈️",
+        "tipo": "si_no",
+        "puntuacion": {
+            "hot": 3,
+            "com": 1
+        }
+    },
+    {
+        "id": "v15",
+        "texto": "¿Te interesa la construcción, la arquitectura o el diseño de edificios?",
+        "icono": "🏗️",
+        "tipo": "si_no",
+        "puntuacion": {
+            "eoc": 3,
+            "ima": 1
+        }
+    },
+    {
+        "id": "v16",
+        "texto": "¿Te gustaría trabajar con químicos o en un laboratorio?",
+        "icono": "🧪",
+        "tipo": "si_no",
+        "puntuacion": {
+            "qui": 3,
+            "san": 1
+        }
+    },
+    {
+        "id": "v17",
+        "texto": "¿Te interesa la energía solar, eólica o las energías renovables?",
+        "icono": "☀️",
+        "tipo": "si_no",
+        "puntuacion": {
+            "ena": 3
+        }
+    },
+    {
+        "id": "v18",
+        "texto": "¿Te gustaría cuidar de personas mayores o niños?",
+        "icono": "👶",
+        "tipo": "si_no",
+        "puntuacion": {
+            "ssc": 3,
+            "san": 1
+        }
+    },
+    {
+        "id": "v19",
+        "texto": "¿Te gusta el cine, la fotografía o la edición de vídeo?",
+        "icono": "🎬",
+        "tipo": "si_no",
+        "puntuacion": {
+            "ims": 3,
+            "ifc": 1
+        }
+    },
+    {
+        "id": "v20",
+        "texto": "¿Te gustaría trabajar con la madera o hacer muebles?",
+        "icono": "🪵",
+        "tipo": "si_no",
+        "puntuacion": {
+            "mam": 3
+        }
+    },
+    {
+        "id": "v21",
+        "texto": "¿Te interesa la moda, la ropa o el diseño textil?",
+        "icono": "👗",
+        "tipo": "si_no",
+        "puntuacion": {
+            "tcp": 3
+        }
+    },
+    {
+        "id": "v22",
+        "texto": "¿Te gustaría trabajar en protección civil o emergencias?",
+        "icono": "🚨",
+        "tipo": "si_no",
+        "puntuacion": {
+            "sea": 3
+        }
+    },
+    {
+        "id": "v23",
+        "texto": "¿Te gusta la peluquería o el cuidado personal?",
+        "icono": "💇",
+        "tipo": "si_no",
+        "puntuacion": {
+            "imp": 3
+        }
+    },
+    {
+        "id": "v24",
+        "texto": "¿Te gustaría trabajar con robots o automatización?",
+        "icono": "🤖",
+        "tipo": "si_no",
+        "puntuacion": {
+            "ele": 3,
+            "ima": 2,
+            "ifc": 1
+        }
+    },
+    {
+        "id": "v25",
+        "texto": "¿Prefieres un trabajo estable con horario fijo?",
+        "icono": "🕐",
+        "tipo": "si_no",
+        "puntuacion": {
+            "adg": 2,
+            "ifc": 1,
+            "san": 1
+        },
+        "excluye": ["hot"]
+    },
+    {
+        "id": "v26",
+        "texto": "¿Te gustaría trabajar en un restaurante u hotel?",
+        "icono": "🏨",
+        "tipo": "si_no",
+        "puntuacion": {
+            "hot": 3
+        }
+    },
+    {
+        "id": "v27",
+        "texto": "¿Te interesa la programación o crear software?",
+        "icono": "🖥️",
+        "tipo": "si_no",
+        "puntuacion": {
+            "ifc": 3,
+            "ele": 1
+        }
+    },
+    {
+        "id": "v28",
+        "texto": "¿Te gustaría trabajar en la industria del vidrio o la cerámica?",
+        "icono": "🏺",
+        "tipo": "si_no",
+        "puntuacion": {
+            "vic": 3
+        }
+    },
+    {
+        "id": "v29",
+        "texto": "¿Te gustaría diseñar o crear obras de arte?",
+        "icono": "🎭",
+        "tipo": "si_no",
+        "puntuacion": {
+            "ara": 3,
+            "ims": 1
+        }
+    },
+    {
+        "id": "v30",
+        "texto": "¿Te gustaría trabajar en la impresión o edición gráfica?",
+        "icono": "🖨️",
+        "tipo": "si_no",
+        "puntuacion": {
+            "agr2": 3
+        }
+    },
+    {
+        "id": "v31",
+        "texto": "¿Te gustaría trabajar en una fábrica o industria?",
+        "icono": "🏭",
+        "tipo": "si_no",
+        "puntuacion": {
+            "fme": 2,
+            "ima": 2,
+            "ina": 1,
+            "qui": 1
+        }
+    },
+    {
+        "id": "v32",
+        "texto": "¿Te interesa la seguridad informática o la ciberseguridad?",
+        "icono": "🔒",
+        "tipo": "si_no",
+        "puntuacion": {
+            "ifc": 3,
+            "ele": 1
+        }
+    },
+    {
+        "id": "v33",
+        "texto": "¿Te gustaría trabajar en la gestión del agua o medio ambiente?",
+        "icono": "💧",
+        "tipo": "si_no",
+        "puntuacion": {
+            "ena": 2,
+            "sea": 2,
+            "agr": 1
+        }
+    },
+    {
+        "id": "v34",
+        "texto": "¿Te gustaría trabajar con clientes y dar servicio?",
+        "icono": "🤝",
+        "tipo": "si_no",
+        "puntuacion": {
+            "com": 2,
+            "hot": 1,
+            "san": 1,
+            "ssc": 1
+        }
+    },
+    {
+        "id": "v35",
+        "texto": "¿Cuál de estas actividades disfrutarías más en tu tiempo libre?",
+        "icono": "🎯",
+        "tipo": "select",
+        "opciones": [
+            { "valor": "tecnologia", "label": "Usar el ordenador o móvil" },
+            { "valor": "deporte", "label": "Hacer deporte" },
+            { "valor": "arte", "label": "Crear arte o manualidades" },
+            { "valor": "naturaleza", "label": "Salir al campo o naturaleza" },
+            { "valor": "lectura", "label": "Leer o estudiar" },
+            { "valor": "social", "label": "Estar con amigos o familia" }
+        ],
+        "puntuacion": {
+            "tecnologia": { "ifc": 2, "ele": 1 },
+            "deporte": { "afd": 2, "san": 1 },
+            "arte": { "ara": 2, "ims": 1, "tcp": 1 },
+            "naturaleza": { "agr": 2, "ena": 1 },
+            "lectura": { "adg": 1, "qui": 1, "san": 1 },
+            "social": { "com": 2, "hot": 1, "ssc": 1 }
+        }
+    }
+]

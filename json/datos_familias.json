@@ -1,0 +1,564 @@
+{
+    "nivelesEstudios": [
+        { "codigo": "basico", "nombre": "Título Profesional Básico" },
+        { "codigo": "medio", "nombre": "Técnico (Grado Medio)" },
+        { "codigo": "superior", "nombre": "Técnico Superior (Grado Superior)" },
+        { "codigo": "especializacionSuperior", "nombre": "Curso de Especialización (Grado Superior)" },
+        { "codigo": "especializacionMedio", "nombre": "Curso de Especialización (Grado Medio)" }
+    ],
+    "familias": {
+        "ele": {
+            "nombre": "Electricidad y Electrónica",
+            "niveles": {
+                "basico": [
+                    { "codigo": "123_1001", "nombre": "Electricidad y Electrónica" },
+                    { "codigo": "123_0802", "nombre": "Fabricación de Elementos Metálicos" },
+                    { "codigo": "123_1002", "nombre": "Instalaciones Electrotécnicas y Mecánica" }
+                ],
+                "medio": [
+                    { "codigo": "121_1001", "nombre": "Instalaciones Eléctricas y Automáticas" },
+                    { "codigo": "121_1002", "nombre": "Instalaciones de Telecomunicaciones" }
+                ],
+                "superior": [
+                    { "codigo": "122_1004", "nombre": "Automatización y Robótica Industrial" },
+                    { "codigo": "122_1005", "nombre": "Electromedicina Clínica" },
+                    { "codigo": "122_1003", "nombre": "Mantenimiento Electrónico" },
+                    { "codigo": "122_1001", "nombre": "Sistemas Electrotécnicos y Automatizados" },
+                    { "codigo": "122_1002", "nombre": "Sistemas de Telecomunicaciones e Informáticos" }
+                ],
+                "especializacionSuperior": [
+                    { "codigo": "124_1001", "nombre": "Ciberseguridad en Entornos de las Tecnologías de la Información" },
+                    { "codigo": "124_1003", "nombre": "Robótica colaborativa" },
+                    { "codigo": "124_1002", "nombre": "Sistemas de señalización y telecomunicaciones ferroviarias" }
+                ],
+                "especializacionMedio": [
+                    { "codigo": "125_1001", "nombre": "Implementación de redes 5G" },
+                    { "codigo": "125_1002", "nombre": "Instalación y mantenimiento de sistemas conectados a internet (IoT)" }
+                ]
+            }
+        },
+        "ifc": {
+            "nombre": "Informática y Comunicaciones",
+            "niveles": {
+                "basico": [
+                    { "codigo": "123_2002", "nombre": "Informática de Oficina" },
+                    { "codigo": "123_2001", "nombre": "Informática y Comunicaciones" }
+                ],
+                "medio": [
+                    { "codigo": "121_2001", "nombre": "Sistemas Microinformáticos y Redes" }
+                ],
+                "superior": [
+                    { "codigo": "122_2001", "nombre": "Administración de Sistemas Informáticos en Red" },
+                    { "codigo": "122_2002", "nombre": "Desarrollo de Aplicaciones Multiplataforma" },
+                    { "codigo": "122_2003", "nombre": "Desarrollo de Aplicaciones Web" }
+                ],
+                "especializacionSuperior": [
+                    { "codigo": "124_2001", "nombre": "Ciberseguridad en Entornos de las Tecnologías de la Información" },
+                    { "codigo": "124_2004", "nombre": "Desarrollo de aplicaciones en lenguaje Python" },
+                    { "codigo": "124_2002", "nombre": "Desarrollo de videojuegos y realidad virtual" },
+                    { "codigo": "124_2005", "nombre": "Despliegue de Productos Software en Contenedores" },
+                    { "codigo": "124_2003", "nombre": "Inteligencia Artificial y Big Data" },
+                    { "codigo": "124_2006", "nombre": "Recursos y Servicios en la Nube" }
+                ],
+                "especializacionMedio": []
+            }
+        },
+        "adg": {
+            "nombre": "Administración y Gestión",
+            "niveles": {
+                "basico": [
+                    { "codigo": "123_2002", "nombre": "Informática de Oficina" },
+                    { "codigo": "123_2101", "nombre": "Servicios Administrativos" }
+                ],
+                "medio": [
+                    { "codigo": "121_2101", "nombre": "Gestión Administrativa" }
+                ],
+                "superior": [
+                    { "codigo": "122_2102", "nombre": "Administración y Finanzas" },
+                    { "codigo": "122_2101", "nombre": "Asistencia a la Dirección" }
+                ],
+                "especializacionSuperior": [],
+                "especializacionMedio": []
+            }
+        },
+        "san": {
+            "nombre": "Sanidad",
+            "niveles": {
+                "basico": [],
+                "medio": [
+                    { "codigo": "121_0601", "nombre": "Cuidados Auxiliares de Enfermería" },
+                    { "codigo": "121_0602", "nombre": "Emergencias Sanitarias" },
+                    { "codigo": "121_0603", "nombre": "Farmacia y Parafarmacia" }
+                ],
+                "superior": [
+                    { "codigo": "122_0604", "nombre": "Anatomía Patológica y Citodiagnóstico" },
+                    { "codigo": "122_0601", "nombre": "Audiología Protésica" },
+                    { "codigo": "122_0602", "nombre": "Dietética" },
+                    { "codigo": "122_0605", "nombre": "Documentación y Administración Sanitarias" },
+                    { "codigo": "122_0606", "nombre": "Higiene Bucodental" },
+                    { "codigo": "122_0607", "nombre": "Imagen para el Diagnóstico y Medicina Nuclear" },
+                    { "codigo": "122_0608", "nombre": "Laboratorio Clínico y Biomédico" },
+                    { "codigo": "122_0603", "nombre": "Ortoprótesis y Productos de Apoyo" },
+                    { "codigo": "122_0609", "nombre": "Prótesis Dentales" },
+                    { "codigo": "122_0610", "nombre": "Radioterapia y Dosimetría" }
+                ],
+                "especializacionSuperior": [],
+                "especializacionMedio": []
+            }
+        },
+        "hot": {
+            "nombre": "Hostelería y Turismo",
+            "niveles": {
+                "basico": [
+                    { "codigo": "123_2403", "nombre": "Actividades de Panadería y Pastelería" },
+                    { "codigo": "123_2402", "nombre": "Alojamiento y Lavandería" },
+                    { "codigo": "123_2401", "nombre": "Cocina y Restauración" }
+                ],
+                "medio": [
+                    { "codigo": "121_2401", "nombre": "Cocina y Gastronomía" },
+                    { "codigo": "121_2202", "nombre": "Comercialización de Productos Alimentarios" },
+                    { "codigo": "121_2402", "nombre": "Servicios en Restauración" }
+                ],
+                "superior": [
+                    { "codigo": "122_2403", "nombre": "Agencias de Viajes y Gestión de Eventos" },
+                    { "codigo": "122_2404", "nombre": "Dirección de Cocina" },
+                    { "codigo": "122_2405", "nombre": "Dirección de Servicios de Restauración" },
+                    { "codigo": "122_2401", "nombre": "Gestión de Alojamientos Turísticos" },
+                    { "codigo": "122_2402", "nombre": "Guía, Información y Asistencias Turísticas" }
+                ],
+                "especializacionSuperior": [],
+                "especializacionMedio": [
+                    { "codigo": "125_2401", "nombre": "Panadería y bollería artesanales" },
+                    { "codigo": "125_2402", "nombre": "Maestría de corte y cata de jamón y paleta curados" }
+                ]
+            }
+        },
+        "com": {
+            "nombre": "Comercio y Marketing",
+            "niveles": {
+                "basico": [
+                    { "codigo": "123_2201", "nombre": "Servicios Comerciales" }
+                ],
+                "medio": [
+                    { "codigo": "121_2201", "nombre": "Actividades Comerciales" },
+                    { "codigo": "121_2202", "nombre": "Comercialización de Productos Alimentarios" }
+                ],
+                "superior": [
+                    { "codigo": "122_2201", "nombre": "Comercio Internacional" },
+                    { "codigo": "122_2202", "nombre": "Gestión de Ventas y Espacios Comerciales" },
+                    { "codigo": "122_2203", "nombre": "Marketing y Publicidad" },
+                    { "codigo": "122_2204", "nombre": "Transporte y Logística" }
+                ],
+                "especializacionSuperior": [
+                    { "codigo": "124_2203", "nombre": "Comercio electrónico (Acceso GS)" },
+                    { "codigo": "124_2201", "nombre": "Posicionamiento en buscadores (SEO/SEM) y comunicación en redes sociales (Acceso GS)" },
+                    { "codigo": "124_2202", "nombre": "Redacción de contenidos digitales para marketing y ventas (Acceso GS)" }
+                ],
+                "especializacionMedio": []
+            }
+        },
+        "fme": {
+            "nombre": "Fabricación Mecánica",
+            "niveles": {
+                "basico": [
+                    { "codigo": "123_0802", "nombre": "Fabricación de Elementos Metálicos" },
+                    { "codigo": "123_0801", "nombre": "Fabricación y Montaje" },
+                    { "codigo": "123_1002", "nombre": "Instalaciones Electrotécnicas y Mecánica" }
+                ],
+                "medio": [
+                    { "codigo": "121_0803", "nombre": "Conformado por Moldeo de Metales y Polímeros" },
+                    { "codigo": "121_0804", "nombre": "Joyería" },
+                    { "codigo": "121_0801", "nombre": "Mecanizado" },
+                    { "codigo": "121_1206", "nombre": "Montaje de Estructuras e Instalación de Sistemas Aeronáuticos" },
+                    { "codigo": "121_0802", "nombre": "Soldadura y Calderería" }
+                ],
+                "superior": [
+                    { "codigo": "122_0802", "nombre": "Construcciones Metálicas" },
+                    { "codigo": "122_0803", "nombre": "Diseño en Fabricación Mecánica" },
+                    { "codigo": "122_0801", "nombre": "Programación de la Producción en Fabricación Mecánica" },
+                    { "codigo": "122_0804", "nombre": "Programación de la Producción en Moldeo de Metales y Polímeros" },
+                    { "codigo": "122_1001", "nombre": "Óptica de Anteojería" }
+                ],
+                "especializacionSuperior": [
+                    { "codigo": "124_0801", "nombre": "Fabricación aditiva" }
+                ],
+                "especializacionMedio": []
+            }
+        },
+        "ima": {
+            "nombre": "Instalación y Mantenimiento",
+            "niveles": {
+                "basico": [
+                    { "codigo": "123_0801", "nombre": "Fabricación y Montaje" },
+                    { "codigo": "123_0901", "nombre": "Mantenimiento de Viviendas" }
+                ],
+                "medio": [
+                    { "codigo": "121_0902", "nombre": "Instalaciones Frigoríficas y de Climatización" },
+                    { "codigo": "121_0901", "nombre": "Instalaciones de Producción de Calor" },
+                    { "codigo": "121_0903", "nombre": "Mantenimiento Electromecánico" }
+                ],
+                "superior": [
+                    { "codigo": "122_0901", "nombre": "Desarrollo de Proyectos de Instalaciones Térmicas y de Fluidos" },
+                    { "codigo": "122_0902", "nombre": "Mantenimiento de Instalaciones Térmicas y de Fluidos" },
+                    { "codigo": "122_0903", "nombre": "Mecatrónica Industrial" }
+                ],
+                "especializacionSuperior": [
+                    { "codigo": "124_0901", "nombre": "Digitalización del Mantenimiento Industrial" },
+                    { "codigo": "124_0902", "nombre": "Fabricación Inteligente" },
+                    { "codigo": "124_0903", "nombre": "Modelado de la información de la construcción (BIM)" }
+                ],
+                "especializacionMedio": []
+            }
+        },
+        "ena": {
+            "nombre": "Energía y Agua",
+            "niveles": {
+                "basico": [],
+                "medio": [
+                    { "codigo": "121_1101", "nombre": "Redes y Estaciones de Tratamiento de Aguas" }
+                ],
+                "superior": [
+                    { "codigo": "122_1103", "nombre": "Centrales Eléctricas" },
+                    { "codigo": "122_1101", "nombre": "Eficiencia Energética y Energía Solar Térmica" },
+                    { "codigo": "122_1102", "nombre": "Energías Renovables" },
+                    { "codigo": "122_1104", "nombre": "Gestión del Agua" }
+                ],
+                "especializacionSuperior": [],
+                "especializacionMedio": []
+            }
+        },
+        "qui": {
+            "nombre": "Química",
+            "niveles": {
+                "basico": [],
+                "medio": [
+                    { "codigo": "121_0402", "nombre": "Operaciones de Laboratorio" },
+                    { "codigo": "121_0401", "nombre": "Planta Química" }
+                ],
+                "superior": [
+                    { "codigo": "122_0403", "nombre": "Fabricación de Productos Farmacéuticos, Biotecnológicos y Afines" },
+                    { "codigo": "122_0401", "nombre": "Laboratorio de Análisis y de Control de Calidad" },
+                    { "codigo": "122_0402", "nombre": "Química Industrial" }
+                ],
+                "especializacionSuperior": [
+                    { "codigo": "124_0401", "nombre": "Cultivos Celulares" }
+                ],
+                "especializacionMedio": []
+            }
+        },
+        "eoc": {
+            "nombre": "Edificación y Obra Civil",
+            "niveles": {
+                "basico": [
+                    { "codigo": "123_1401", "nombre": "Reforma y Mantenimiento de Edificios" }
+                ],
+                "medio": [
+                    { "codigo": "121_1401", "nombre": "Construcción" },
+                    { "codigo": "121_1402", "nombre": "Obras de Interior, Decoración y Rehabilitación" }
+                ],
+                "superior": [
+                    { "codigo": "122_1403", "nombre": "Organización y Control de Obras de Construcción" },
+                    { "codigo": "122_1401", "nombre": "Proyectos de Edificación" },
+                    { "codigo": "122_1402", "nombre": "Proyectos de Obra Civil" }
+                ],
+                "especializacionSuperior": [],
+                "especializacionMedio": []
+            }
+        },
+        "agr": {
+            "nombre": "Agraria",
+            "niveles": {
+                "basico": [
+                    { "codigo": "123_0102", "nombre": "Actividades Agropecuarias" },
+                    { "codigo": "123_0101", "nombre": "Agro-jardinería y Composiciones Florales" },
+                    { "codigo": "123_0103", "nombre": "Aprovechamientos Forestales" }
+                ],
+                "medio": [
+                    { "codigo": "121_2501", "nombre": "Actividades Ecuestres" },
+                    { "codigo": "121_0104", "nombre": "Aprovechamiento y Conservación del Medio Natural" },
+                    { "codigo": "121_0103", "nombre": "Jardinería y Floristería" },
+                    { "codigo": "121_0101", "nombre": "Producción Agroecológica" },
+                    { "codigo": "121_0102", "nombre": "Producción Agropecuaria" }
+                ],
+                "superior": [
+                    { "codigo": "122_0103", "nombre": "Ganadería y Asistencia en Sanidad Animal" },
+                    { "codigo": "122_0101", "nombre": "Gestión Forestal y del Medio Natural" },
+                    { "codigo": "122_0102", "nombre": "Paisajismo y Medio Rural" }
+                ],
+                "especializacionSuperior": [],
+                "especializacionMedio": [
+                    { "codigo": "125_0101", "nombre": "Floristería y arte floral" },
+                    { "codigo": "125_0102", "nombre": "Insecticultura" }
+                ]
+            }
+        },
+        "ina": {
+            "nombre": "Industrias Alimentarias",
+            "niveles": {
+                "basico": [
+                    { "codigo": "123_2403", "nombre": "Actividades de Panadería y Pastelería" },
+                    { "codigo": "123_0701", "nombre": "Industrias Alimentarias" }
+                ],
+                "medio": [
+                    { "codigo": "121_0701", "nombre": "Aceites de Oliva y Vinos" },
+                    { "codigo": "121_0702", "nombre": "Elaboración de Productos Alimenticios" },
+                    { "codigo": "121_0703", "nombre": "Panadería, Repostería y Confitería" }
+                ],
+                "superior": [
+                    { "codigo": "122_0701", "nombre": "Procesos y Calidad en la Industria Alimentaria" },
+                    { "codigo": "122_0702", "nombre": "Vitivinicultura" }
+                ],
+                "especializacionSuperior": [],
+                "especializacionMedio": []
+            }
+        },
+        "sea": {
+            "nombre": "Seguridad y Medio Ambiente",
+            "niveles": {
+                "basico": [],
+                "medio": [
+                    { "codigo": "121_1301", "nombre": "Emergencias y Protección Civil" },
+                    { "codigo": "121_1302", "nombre": "Sanidad Ambiental Aplicada" },
+                    { "codigo": "121_1303", "nombre": "Seguridad" }
+                ],
+                "superior": [
+                    { "codigo": "122_1301", "nombre": "Coordinación de Emergencias y Protección Civil" },
+                    { "codigo": "122_1302", "nombre": "Educación y Control Ambiental" },
+                    { "codigo": "122_1303", "nombre": "Prevención de Riesgos Profesionales" },
+                    { "codigo": "122_1304", "nombre": "Química y Salud Ambiental" }
+                ],
+                "especializacionSuperior": [],
+                "especializacionMedio": []
+            }
+        },
+        "ssc": {
+            "nombre": "Servicios Socioculturales y a la Comunidad",
+            "niveles": {
+                "basico": [
+                    { "codigo": "123_1501", "nombre": "Actividades Domésticas y Limpieza de Edificios" }
+                ],
+                "medio": [
+                    { "codigo": "121_1501", "nombre": "Atención a Personas en Situación de Dependencia" },
+                    { "codigo": "121_1502", "nombre": "Servicios Funerarios" }
+                ],
+                "superior": [
+                    { "codigo": "122_1501", "nombre": "Animación Sociocultural y Turística" },
+                    { "codigo": "122_1502", "nombre": "Educación Infantil" },
+                    { "codigo": "122_1503", "nombre": "Formación y Movilidad Segura y Sostenible" },
+                    { "codigo": "122_1504", "nombre": "Integración Social" },
+                    { "codigo": "122_1505", "nombre": "Mediación Comunicativa" },
+                    { "codigo": "122_1506", "nombre": "Promoción de la Igualdad de Género" }
+                ],
+                "especializacionSuperior": [],
+                "especializacionMedio": []
+            }
+        },
+        "tcp": {
+            "nombre": "Textil, Confección y Piel",
+            "niveles": {
+                "basico": [
+                    { "codigo": "123_1801", "nombre": "Arreglo y Reparación de Artículos Textiles y de Piel" },
+                    { "codigo": "123_1802", "nombre": "Tapicería y Cortinaje" }
+                ],
+                "medio": [
+                    { "codigo": "121_1801", "nombre": "Calzado y Complementos de Moda" },
+                    { "codigo": "121_1802", "nombre": "Confección y Moda" },
+                    { "codigo": "121_1803", "nombre": "Fabricación y Ennoblecimiento de Productos Textiles" }
+                ],
+                "superior": [
+                    { "codigo": "122_1801", "nombre": "Diseño Técnico Textil y de Piel" },
+                    { "codigo": "122_1802", "nombre": "Diseño y Producción de Calzado y Complementos" },
+                    { "codigo": "122_1803", "nombre": "Patronaje y Moda" },
+                    { "codigo": "122_1804", "nombre": "Vestuario de Medida y Espectáculos" }
+                ],
+                "especializacionSuperior": [],
+                "especializacionMedio": []
+            }
+        },
+        "mam": {
+            "nombre": "Madera, Mueble y Corcho",
+            "niveles": {
+                "basico": [
+                    { "codigo": "123_1601", "nombre": "Carpintería y Mueble" }
+                ],
+                "medio": [
+                    { "codigo": "121_1601", "nombre": "Carpintería y Mueble" },
+                    { "codigo": "121_1602", "nombre": "Instalación y Amueblamiento" },
+                    { "codigo": "121_1603", "nombre": "Procesado y Transformación de la Madera" }
+                ],
+                "superior": [
+                    { "codigo": "122_1601", "nombre": "Diseño y Amueblamiento" }
+                ],
+                "especializacionSuperior": [],
+                "especializacionMedio": []
+            }
+        },
+        "vic": {
+            "nombre": "Vidrio y Cerámica",
+            "niveles": {
+                "basico": [
+                    { "codigo": "123_1901", "nombre": "Vidriería y Alfarería" }
+                ],
+                "medio": [
+                    { "codigo": "121_1901", "nombre": "Fabricación de Productos Cerámicos" }
+                ],
+                "superior": [
+                    { "codigo": "122_1901", "nombre": "Desarrollo y Fabricación de Productos Cerámicos" }
+                ],
+                "especializacionSuperior": [],
+                "especializacionMedio": []
+            }
+        },
+        "agr2": {
+            "nombre": "Artes Gráficas",
+            "niveles": {
+                "basico": [
+                    { "codigo": "123_2003", "nombre": "Artes Gráficas" }
+                ],
+                "medio": [
+                    { "codigo": "121_2002", "nombre": "Impresión Gráfica" },
+                    { "codigo": "121_2003", "nombre": "Postimpresión y Acabados Gráficos" },
+                    { "codigo": "121_2004", "nombre": "Preimpresión Digital" }
+                ],
+                "superior": [
+                    { "codigo": "122_2004", "nombre": "Diseño y Edición de Publicaciones Impresas y Multimedia" },
+                    { "codigo": "122_2005", "nombre": "Diseño y Gestión de la Producción Gráfica" }
+                ],
+                "especializacionSuperior": [],
+                "especializacionMedio": []
+            }
+        },
+        "ims": {
+            "nombre": "Imagen y Sonido",
+            "niveles": {
+                "basico": [],
+                "medio": [
+                    { "codigo": "121_2301", "nombre": "Vídeo, Disc-Jockey y Sonido" }
+                ],
+                "superior": [
+                    { "codigo": "122_2301", "nombre": "Animaciones 3D, Juegos y Entornos Interactivos" },
+                    { "codigo": "122_2302", "nombre": "Iluminación, Captación y Tratamiento de la Imagen" },
+                    { "codigo": "122_2303", "nombre": "Producción de Audiovisuales y Espectáculos" },
+                    { "codigo": "122_2304", "nombre": "Realización de Proyectos Audiovisuales y Espectáculos" },
+                    { "codigo": "122_2305", "nombre": "Sonido para Audiovisuales y Espectáculos" }
+                ],
+                "especializacionSuperior": [
+                    { "codigo": "124_2301", "nombre": "Audiodescripción y subtitulación" }
+                ],
+                "especializacionMedio": []
+            }
+        },
+        "ara": {
+            "nombre": "Artes y Artesanías",
+            "niveles": {
+                "basico": [],
+                "medio": [],
+                "superior": [
+                    { "codigo": "122_2601", "nombre": "Artista Fallero y Construcción de Escenografías" }
+                ],
+                "especializacionSuperior": [],
+                "especializacionMedio": []
+            }
+        },
+        "afd": {
+            "nombre": "Actividades Físicas y Deportivas",
+            "niveles": {
+                "basico": [
+                    { "codigo": "123_2501", "nombre": "Acceso y Conservación en Instalaciones Deportivas" }
+                ],
+                "medio": [
+                    { "codigo": "121_2501", "nombre": "Actividades Ecuestres" },
+                    { "codigo": "121_2502", "nombre": "Guía en el Medio Natural y de Tiempo Libre" }
+                ],
+                "superior": [
+                    { "codigo": "122_2501", "nombre": "Acondicionamiento Físico" },
+                    { "codigo": "122_2502", "nombre": "Enseñanza y Animación Sociodeportiva" }
+                ],
+                "especializacionSuperior": [],
+                "especializacionMedio": []
+            }
+        },
+        "iex": {
+            "nombre": "Industrias Extractivas",
+            "niveles": {
+                "basico": [],
+                "medio": [
+                    { "codigo": "121_2601", "nombre": "Excavaciones y Sondeos" },
+                    { "codigo": "121_2602", "nombre": "Piedra Natural" }
+                ],
+                "superior": [],
+                "especializacionSuperior": [],
+                "especializacionMedio": []
+            }
+        },
+        "imp": {
+            "nombre": "Imagen Personal",
+            "niveles": {
+                "basico": [
+                    { "codigo": "123_2502", "nombre": "Peluquería y Estética" }
+                ],
+                "medio": [
+                    { "codigo": "121_2502", "nombre": "Estética y Belleza" },
+                    { "codigo": "121_2503", "nombre": "Peluquería, Cosmética Capilar" }
+                ],
+                "superior": [
+                    { "codigo": "122_2501", "nombre": "Asesoría de Imagen Personal y Corporativa" },
+                    { "codigo": "122_2502", "nombre": "Caracterización y Maquillaje Profesional" },
+                    { "codigo": "122_2503", "nombre": "Estilismo y Dirección de Peluquería" },
+                    { "codigo": "122_2504", "nombre": "Estética Integral y Bienestar" },
+                    { "codigo": "122_2505", "nombre": "Termalismo y Bienestar" }
+                ],
+                "especializacionSuperior": [],
+                "especializacionMedio": []
+            }
+        },
+        "tmv": {
+            "nombre": "Transporte y Mantenimiento de Vehículos",
+            "niveles": {
+                "basico": [
+                    { "codigo": "123_1202", "nombre": "Mantenimiento de Embarcaciones Deportivas y de Recreo" },
+                    { "codigo": "123_1201", "nombre": "Mantenimiento de Vehículos" }
+                ],
+                "medio": [
+                    { "codigo": "121_1201", "nombre": "Carrocería" },
+                    { "codigo": "121_1204", "nombre": "Conducción de Vehículos de Transporte por Carretera" },
+                    { "codigo": "121_1203", "nombre": "Electromecánica de Maquinaria" },
+                    { "codigo": "121_1202", "nombre": "Electromecánica de Vehículos Automóviles" },
+                    { "codigo": "121_1208", "nombre": "Mantenimiento de Embarcaciones de Recreo" },
+                    { "codigo": "121_1205", "nombre": "Mantenimiento de Material Rodante Ferroviario" },
+                    { "codigo": "121_1207", "nombre": "Mantenimiento de Estructuras de Madera, Mobiliario y Embarcaciones de Recreo" },
+                    { "codigo": "121_1206", "nombre": "Montaje de Estructuras e Instalación de Sistemas Aeronáuticos" }
+                ],
+                "superior": [
+                    { "codigo": "122_1201", "nombre": "Automoción" },
+                    { "codigo": "122_1202", "nombre": "Mantenimiento Aeromecánico de Aviones con Motor de Pistón" },
+                    { "codigo": "122_1203", "nombre": "Mantenimiento Aeromecánico de Aviones con Motor de Turbina" },
+                    { "codigo": "122_1204", "nombre": "Mantenimiento Aeromecánico de Helicópteros con Motor de Pistón" },
+                    { "codigo": "122_1205", "nombre": "Mantenimiento Aeromecánico de Helicópteros con Motor de Turbina" },
+                    { "codigo": "122_1206", "nombre": "Mantenimiento de Sistemas Electrónicos y Aviónicos de Aeronaves" }
+                ],
+                "especializacionSuperior": [
+                    { "codigo": "124_1201", "nombre": "Mantenimiento avanzado de sistemas de material rodante ferroviario" },
+                    { "codigo": "124_1202", "nombre": "Mantenimiento y seguridad en sistemas de vehículos híbridos y eléctricos" },
+                    { "codigo": "124_1203", "nombre": "Aeronaves pilotadas de forma remota-Drones" },
+                    { "codigo": "124_1204", "nombre": "Inspección Técnica y Peritación de Siniestros en Vehículos" }
+                ],
+                "especializacionMedio": [
+                    { "codigo": "125_1201", "nombre": "Mantenimiento de vehículos híbridos y eléctricos" }
+                ]
+            }
+        },
+        "iad": {
+            "nombre": "Inteligencia Artificial y Data",
+            "niveles": {
+                "basico": [],
+                "medio": [],
+                "superior": [
+                    { "codigo": "2722_1001", "nombre": "Inteligencia Artificial y Big Data" }
+                ],
+                "especializacionSuperior": [],
+                "especializacionMedio": []
+            }
+        }
+    }
+}

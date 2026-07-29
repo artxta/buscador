@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:,">
+    <title>Buscador de Centros FP</title>
+    <link rel="stylesheet" href="styles/estilo.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Buscador de Centros FP</h1>
+        
+        <div class="search-box">
+            <div class="info-box">
+                Busca centros de Formación Profesional.
+                Selecciona una familia profesional, el nivel de estudios y luego la enseñanza específica.
+                <br><em>Este buscador puede contener errores. Comprueba siempre los datos con la fuente oficial.</em>
+            </div>
+
+            <div class="step-indicator">
+                <div class="step active" id="step1">
+                    <span class="step-number">1</span>
+                    Familia Profesional
+                </div>
+                <div class="step" id="step2">
+                    <span class="step-number">2</span>
+                    Nivel de Estudios
+                </div>
+                <div class="step" id="step3">
+                    <span class="step-number">3</span>
+                    Enseñanza
+                </div>
+                <div class="step" id="step4">
+                    <span class="step-number">4</span>
+                    Modalidad
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="familia">1. Familia Profesional:</label>
+                <select id="familia">
+                    <option value="">-- Selecciona una familia profesional --</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="nivel">2. Nivel de Estudios:</label>
+                <select id="nivel" disabled>
+                    <option value="">-- Primero selecciona una familia --</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="ensenanza">3. Enseñanza:</label>
+                <select id="ensenanza" disabled>
+                    <option value="">-- Primero selecciona nivel --</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="modalidad">4. Modalidad:</label>
+                <select id="modalidad">
+                    <option value="">Todas las modalidades</option>
+                    <option value="1">Diurno</option>
+                    <option value="2">Nocturno</option>
+                    <option value="3">Distancia</option>
+                    <option value="6">Semipresencial</option>
+                </select>
+            </div>
+
+            <div id="mensajeAutomatico" class="info-box" style="display: none;">
+                Se mostrarán automáticamente los centros al seleccionar una enseñanza.
+            </div>
+
+            <div class="form-group" style="text-align: center; margin-top: 20px;">
+                <button type="button" class="btn-reset" id="btnReiniciar">Reiniciar búsqueda</button>
+            </div>
+
+            <div class="ubicacion-box">
+                <div class="ubicacion-titulo">&#128205; Ordenar centros por proximidad</div>
+                <div class="ubicacion-subtitulo">Pon aqu&iacute; tu ciudad y dale a buscar</div>
+                <div class="ubicacion-row">
+                    <div class="input-ubicacion">
+                        <input type="text" id="inputUbicacion" placeholder="Escribe tu ciudad...">
+                        <button type="button" class="btn-buscar-ubi" id="btnBuscarUbicacion">Buscar</button>
+                    </div>
+                    <span id="estadoUbicacion" class="ubicacion-estado"></span>
+                </div>
+                <div id="infoUbicacion" class="info-ubicacion" style="display:none;"></div>
+            </div>
+        </div>
+
+        <div class="results" id="results"></div>
+
+        <div class="quiz-selector">
+            <button type="button" class="btn-quiz" id="btnQuizVocacional">&#127919; Test Vocacional</button>
+        </div>
+    </div>
+
+    <div class="quiz-overlay" id="quizOverlay">
+        <div class="quiz-modal" id="quizModal">
+            <button class="quiz-cerrar" id="quizCerrar">&times;</button>
+            <h2 id="quizTitulo">&#128218; ¿Qué estudiar?</h2>
+            <p class="quiz-subtitulo" id="quizSubtitulo">Responde estas preguntas y te recomendaremos familias profesionales</p>
+
+            <div class="quiz-progreso">
+                <div class="quiz-progreso-barra" id="quizBarra"></div>
+                <span class="quiz-progreso-texto" id="quizProgresoTexto">1 / 18</span>
+            </div>
+
+            <div class="quiz-pregunta" id="quizPregunta"></div>
+
+            <div class="quiz-opciones" id="quizOpciones"></div>
+
+            <div class="quiz-navegacion">
+                <button type="button" class="quiz-btn-back" id="quizBtnBack">&#8592; Atr&aacute;s</button>
+                <button type="button" class="quiz-btn-skip" id="quizBtnSkip">Omitir</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="quiz-resultado-overlay" id="quizResultadoOverlay">
+        <div class="quiz-resultado-modal" id="quizResultadoModal">
+            <button class="quiz-cerrar" id="quizResultadoCerrar">&times;</button>
+            <h2>&#127919; Tus recomendaciones</h2>
+            <p class="quiz-subtitulo" id="quizResultadoSubtitulo"></p>
+            <div class="quiz-resultado-lista" id="quizResultadoLista"></div>
+            <div class="quiz-resultado-acciones">
+                <button type="button" class="quiz-btn-reiniciar" id="quizBtnReiniciar">&#128260; Volver a empezar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/ciudades.js"></script>
+    <script src="js/estados.js"></script>
+    <script src="js/utilidades.js"></script>
+    <script src="js/datos.js"></script>
+    <script src="js/formulario.js"></script>
+    <script src="js/ubicacion.js"></script>
+    <script src="js/busqueda.js"></script>
+    <script src="js/scrollbar.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/eventos.js"></script>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p><strong>Formularios utilizados:</strong> Esta página utiliza los formularios oficiales de <a href="https://www.educacion.gob.es" target="_blank">educacion.gob.es</a> para la búsqueda de centros de Formación Profesional.</p>
+            <p>Esta página tiene como objetivo facilitar la búsqueda de centros de FP a distancia. También puedes acceder directamente a los formularios oficiales de <a href="https://www.educacion.gob.es" target="_blank">educacion.gob.es</a>.</p>
+            <p><strong>Aviso:</strong> Esta página no tiene ninguna relación con las páginas oficiales mencionadas. Su único propósito es ayudar de una forma más sencilla en la búsqueda de centros.</p>
+            <p class="footer-autor">Creado por: <strong>Jose Alberto Torresano</strong></p>
+            <p class="footer-donar">Si te ha sido útil, invítame a un café ☕<br><a href="https://ko-fi.com/josetorresano" target="_blank">Ko-fi</a></p>
+        </div>
+    </footer>
+    <div class="version">v1.00</div>
+</body>
+</html>
