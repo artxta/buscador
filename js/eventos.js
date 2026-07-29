@@ -4,6 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('familia').addEventListener('change', cargarNiveles);
     document.getElementById('nivel').addEventListener('change', cargarEnsenanzas);
     document.getElementById('modalidad').addEventListener('change', () => {
+        if (typeof umami !== 'undefined') {
+            const mod = document.getElementById('modalidad').value;
+            if (mod) umami.track('cambio_modalidad', { modalidad: { '1': 'Diurno', '2': 'Nocturno', '3': 'Distancia', '6': 'Semipresencial' }[mod] || mod });
+        }
         if (document.getElementById('ensenanza').value) buscarCentros();
     });
     document.getElementById('btnReiniciar').addEventListener('click', reiniciarBusqueda);
@@ -63,7 +67,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // === Tabla resultados: delegación de eventos ===
     document.getElementById('results').addEventListener('click', e => {
         const btn = e.target.closest('.btn-calcular');
-        if (btn) { calcularDistanciasProgresivo(); return; }
+        if (btn) {
+            if (typeof umami !== 'undefined') umami.track('calcular_distancias');
+            calcularDistanciasProgresivo();
+            return;
+        }
 
         const mapa = e.target.closest('.btn-maps');
         if (mapa) {
@@ -71,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const lat = mapa.dataset.lat;
             const lng = mapa.dataset.lng;
             const dest = mapa.dataset.dest;
+            if (typeof umami !== 'undefined') umami.track('abrir_mapa', { destino: dest });
             if (lat && lng) abrirGoogleMaps(lat, lng, dest);
             else abrirGoogleMapsSinOrigen(dest);
             return;
@@ -86,6 +95,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById('results').addEventListener('change', e => {
         if (e.target.id === 'filtroProvincia' || e.target.id === 'filtroNaturaleza' || e.target.id === 'ordenarDistancia') {
+            if (typeof umami !== 'undefined' && e.target.id === 'ordenarDistancia' && e.target.checked) {
+                umami.track('ordenar_por_distancia');
+            }
             filtrarCentros();
         }
     });

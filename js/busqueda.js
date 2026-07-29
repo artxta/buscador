@@ -136,6 +136,7 @@ async function buscarCentros() {
                 </table>
             </div>`;
     mostrarCentros(centros);
+    if (typeof umami !== 'undefined') umami.track('buscar_centros', { ensenanza: codigo, nivel: nivelSel, modalidad: mod || 'todas', total: centros.length });
     if (miUbicacion) {
         calcularDistanciasAutomatico();
     }
@@ -184,6 +185,7 @@ function mostrarCentros(centros) {
 }
 
 function abrirDetalleCentro(codigoCentro, ensenanzaFP) {
+    if (typeof umami !== 'undefined') umami.track('ver_detalle_centro', { codigo: codigoCentro, ensenanza: ensenanzaFP });
     const form = document.createElement('form');
     form.method = 'POST';
     form.action = 'https://www.educacion.gob.es/centros/detalleCentro';
@@ -201,6 +203,10 @@ function abrirDetalleCentro(codigoCentro, ensenanzaFP) {
 function filtrarCentros() {
     const p = normalizar(document.getElementById('filtroProvincia')?.value || '');
     const n = normalizar(document.getElementById('filtroNaturaleza')?.value || '');
+    if (typeof umami !== 'undefined') {
+        if (p) umami.track('filtro_provincia', { provincia: document.getElementById('filtroProvincia').value });
+        if (n) umami.track('filtro_naturaleza', { naturaleza: document.getElementById('filtroNaturaleza').value });
+    }
     let filtrados = (window.todosLosCentros || []).filter(ce =>
         (p === '' || normalizar(ce.provincia) === p) &&
         (n === '' || normalizar(ce.naturaleza).includes(n))

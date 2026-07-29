@@ -76,6 +76,7 @@ function buscarUbicacionManual() {
     if (resultadoLocal) {
         const { lat, lng, nombre } = resultadoLocal;
         miUbicacion = { lat, lng };
+        if (typeof umami !== 'undefined') umami.track('buscar_ubicacion', { texto: texto, resultado: 'encontrado_local', ciudad: nombre });
         estado.textContent = nombre;
         input.value = nombre;
         info.style.display = 'block';
@@ -98,6 +99,7 @@ function buscarUbicacionManual() {
                 const lat = parseFloat(data[0].lat);
                 const lng = parseFloat(data[0].lon);
                 miUbicacion = { lat, lng };
+                if (typeof umami !== 'undefined') umami.track('buscar_ubicacion', { texto: texto, resultado: 'encontrado_api', ciudad: data[0].display_name.split(',')[0] });
 
                 const nombre = data[0].display_name.split(',').slice(0, 2).join(', ');
                 estado.textContent = nombre || texto;
@@ -110,6 +112,7 @@ function buscarUbicacionManual() {
                     reconstruirTabla();
                 }
             } else {
+                if (typeof umami !== 'undefined') umami.track('buscar_ubicacion', { texto: texto, resultado: 'no_encontrado' });
                 estado.textContent = 'Lugar no encontrado. Prueba con otro nombre.';
             }
         })

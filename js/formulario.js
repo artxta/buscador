@@ -8,6 +8,7 @@ function cargarNiveles() {
     selectEnsenanza.disabled = true;
     actualizarPasos(1);
     const fam = document.getElementById('familia').value;
+    if (typeof umami !== 'undefined') umami.track('seleccion_familia', { familia: fam });
     if (fam && datosFamilias[fam]) {
         nivelesEstudios.forEach(n => {
             const ens = datosFamilias[fam].niveles[n.codigo] || [];
@@ -30,6 +31,7 @@ function cargarEnsenanzas() {
     selectEnsenanza.innerHTML = '<option value="">-- Selecciona una enseñanza --</option>';
     resultsDiv.innerHTML = '';
     if (niv) actualizarPasos(2);
+    if (typeof umami !== 'undefined') umami.track('seleccion_nivel', { nivel: niv, familia: fam });
     if (fam && niv && datosFamilias[fam]) {
         const ens = datosFamilias[fam].niveles[niv] || [];
         if (ens.length === 0) {
@@ -50,8 +52,13 @@ function cargarEnsenanzas() {
         document.getElementById('mensajeAutomatico').style.display = 'none';
     }
     selectEnsenanza.addEventListener('change', function () {
-        if (this.value) { actualizarPasos(4); buscarCentros(); }
-        else resultsDiv.innerHTML = '';
+        if (this.value) {
+            actualizarPasos(4);
+            if (typeof umami !== 'undefined') umami.track('seleccion_ensenanza', { ensenanza: this.value, nombre: this.options[this.selectedIndex].text });
+            buscarCentros();
+        } else {
+            resultsDiv.innerHTML = '';
+        }
     });
 }
 
@@ -73,6 +80,7 @@ function reiniciarBusqueda() {
     document.getElementById('modalidad').value = '';
     document.getElementById('results').innerHTML = '';
     document.getElementById('mensajeAutomatico').style.display = 'none';
+    if (typeof umami !== 'undefined') umami.track('reiniciar_busqueda');
 
     miUbicacion = null;
     window.todosLosCentros = null;

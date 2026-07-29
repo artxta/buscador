@@ -43,6 +43,7 @@ function abrirQuiz(tipo = 'original') {
     quizExcluidasEnsenanzas = new Set();
     quizExcluidasGrupos = new Set();
     quizInteresEnsenanzas = new Set();
+    if (typeof umami !== 'undefined') umami.track('abrir_quiz', { tipo: tipo });
 
     const titulo = document.getElementById('quizTitulo');
     const subtitulo = document.getElementById('quizSubtitulo');
@@ -63,6 +64,7 @@ function abrirQuiz(tipo = 'original') {
 }
 
 function cerrarQuiz() {
+    if (typeof umami !== 'undefined') umami.track('cerrar_quiz', { paso: quizPasoActual, respuestas: Object.keys(quizRespuestas).length });
     document.getElementById('quizOverlay').classList.remove('activo');
     document.body.style.overflow = '';
 }
@@ -101,11 +103,13 @@ function mostrarPreguntaQuiz() {
 
 function quizSeleccionarSelect(id, valor) {
     quizRespuestas[id] = valor;
+    if (typeof umami !== 'undefined') umami.track('quiz_respuesta', { id: id, valor: valor, tipo: 'select' });
     quizAvanzar();
 }
 
 function quizSeleccionarSiNo(id, valor) {
     quizRespuestas[id] = valor;
+    if (typeof umami !== 'undefined') umami.track('quiz_respuesta', { id: id, valor: valor, tipo: 'si_no' });
     const p = QUIZ_PREGUNTAS.find(q => q.id === id);
     if (!p) { quizAvanzar(); return; }
 
@@ -270,6 +274,7 @@ function mostrarResultadosQuiz() {
 
     document.getElementById('quizResultadoOverlay').classList.add('activo');
     document.body.style.overflow = 'hidden';
+    if (typeof umami !== 'undefined') umami.track('quiz_resultado', { familias_recomendadas: ordenadas.length, tipo: quizTipoActual });
 }
 
 function obtenerNombreNivel(codigo) {
@@ -290,6 +295,7 @@ function obtenerEnsenanzasFamilia(fam, nivel) {
 
 function quizBuscarFamilia(fam, nivel) {
     cerrarResultado();
+    if (typeof umami !== 'undefined') umami.track('quiz_buscar_familia', { familia: fam, nivel: nivel, nombre: QUIZ_NOMBRES_FAMILIAS[fam] || fam });
 
     const selectFamilia = document.getElementById('familia');
     selectFamilia.value = fam;
